@@ -16,10 +16,16 @@ export class HeaderComponent implements OnInit {
     {option: 'Proyectos', key: 3},
     {option: 'Contactame', key: 4},
   ]
+  isMenuOpen: boolean = false;
+  displayBackdrop: 'none' | 'block' = 'none';
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  menuToggle(): void {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
 }
