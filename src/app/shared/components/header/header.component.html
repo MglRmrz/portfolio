@@ -1,0 +1,23 @@
+<header class="header">
+
+    <div class="title-container">
+        <h1 class="title">
+            Miguel Ramírez
+        </h1>
+
+        <div class="triangle"></div>
+    </div>
+
+    <nav>
+        <ul>
+            <li 
+                *ngFor="let option of navOptions"
+                class="option"
+                [class.optionSelected]="option.key === selected"
+                (click)="selected = option.key"
+            >
+                {{option.option}}
+            </li>
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,63 @@
+@import '../../../app.component.scss';
+
+.header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 80px;
+    box-shadow: 0px 0px 5px #d1d1d1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    .title-container {
+        width: 35%;
+        background: $primary;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .title {
+            font-family: 'Kanit', sans-serif;
+            color: white;
+        }
+
+        .triangle {
+            border-right: 100px solid transparent;
+            position: absolute;
+            bottom: 0;
+            right: -100px;
+            border-bottom: 70px solid $primary;
+        }
+    }
+
+    nav {
+
+        ul {
+            list-style: none;
+            display: flex;
+
+            .option {
+                margin: 0 8px;
+                cursor: pointer;
+                color: $text;
+                font-size: 17px;
+
+                &:hover {
+                    color: $primary!important;
+                    border-bottom: 2px solid $primary;
+                }
+            }
+        }
+    }
+}
+
+.optionSelected {
+    color: $primary!important;
+    border-bottom: 2px solid $primary;
+    font-weight: 700;
+}
