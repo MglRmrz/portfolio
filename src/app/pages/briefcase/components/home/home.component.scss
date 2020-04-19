@@ -1,0 +1,131 @@
+@import '../../../../app.component.scss';
+
+.container {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    // height: 700px;
+    // padding-left: 70px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 8;
+
+    &-image {
+        // width: 500px;
+        // height: 570px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background: $primary;
+
+        img {
+            width: 97%;
+            height: 97%;
+            border-radius: 10px;
+        }
+    }
+
+    &-info {
+        // margin-left: 50px;
+        height: 230px;
+
+        .hello {
+            margin-bottom: 15px;
+        }
+
+        .profession {
+            position: relative;
+            // bottom: 117px;
+        }
+
+        .profession, .greeting {
+            transition: all .5s;
+        }
+
+        .name {
+            font-size: 40px;
+            // width: 380px;
+
+            span {
+                color: $primary;
+            }
+        }
+
+        .hireme {
+            width: 150px;
+            height: 50px;
+            border-radius: 50px;
+            font-size: 20px;
+            background: white;
+            border: 1px solid $primary;
+            position: relative;
+            // bottom: 100px;
+            font-weight: bold;
+            color: $primary;
+            transition: all .5s;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 130px;
+            margin: auto;
+
+            &:hover {
+                background: $primary;
+                color: white;
+            }
+        }
+    }
+}
+
+@media(min-width: 320px) {
+    .container {
+        justify-content: center;
+        height: auto;
+        padding-left: 0;
+
+        &-image {
+            width: 300px;
+            height: 370px;
+        }
+
+        &-info {
+            height: 250px;
+            padding: 10px;
+            margin-left: 0;
+
+            .profession {
+                bottom: 172px;
+            }
+
+            .name {
+                width: 300px;
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .container {
+        justify-content: space-around;
+    }
+}
+
+@media(min-width: 1024px) {
+    .container {
+        height: 700px;
+        justify-content: flex-start;
+        padding-left: 70px;
+
+        &-image {
+            width: 500px;
+            height: 570px;
+        }
+
+        &-info {
+            margin-left: 50px;
+        }
+
+    }
+}
