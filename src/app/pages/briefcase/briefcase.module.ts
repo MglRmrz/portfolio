@@ -7,10 +7,11 @@ import { SharedModule } from '@shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { WhatIDoCardComponent } from './components/what-ido-card/what-ido-card.component';
 
 
 @NgModule({
-  declarations: [BriefcaseComponent, HomeComponent, AboutComponent, SkillsComponent],
+  declarations: [BriefcaseComponent, HomeComponent, AboutComponent, SkillsComponent, WhatIDoCardComponent],
   imports: [
     CommonModule,
     BriefcaseRoutingModule,

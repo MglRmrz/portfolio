@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection, QuerySnapshot, DocumentData } from '@angular/fire/firestore';
 import { MSkill } from '@core/models/skill.model';
 import { Subject, Observable } from 'rxjs';
 
@@ -16,9 +16,22 @@ export class SkillsService {
 
   /**
    * @description Obtiene las skills
-   * @return Observable<MSkill[]>
+   * @return Promise<QuerySnapshot<DocumentData>>
    */
-  public getSkills(): Observable<MSkill[]> {
-    return this.skillsCollection.valueChanges();
+  public getSkills(): Promise<MSkill[]> {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const data: MSkill[] = [];
+        const snapshot = await this.skillsCollection.ref.orderBy('position', 'asc').get();
+
+        snapshot.forEach(skill => {
+          data.push(<MSkill>skill.data());
+        });
+
+        resolve(data);
+      } catch (error) {
+        reject(error);
+      }  
+    })
   }
 }

@@ -14,7 +14,8 @@ export class BriefcaseComponent implements OnInit {
   constructor(private _skills: SkillsService) { }
 
   ngOnInit(): void {
-    this._skills.getSkills().subscribe(skills => {
+    this._skills.getSkills()
+    .then(skills => {
       this.skills = skills;
     });
   }

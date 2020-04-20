@@ -1,0 +1,47 @@
+@import '../../../../app.component.scss';
+
+.container {
+    text-align: center;
+    color: $text;
+    padding: 20px;
+    box-shadow: 0px 0px 15px #cdcdcd;
+    border-radius: 10px;
+    background: white;
+    margin-top: 20px;
+
+    .icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    h3 {
+        margin: 25px 0 15px 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .border {
+        width: 20px;
+        background: $text;
+        height: 1px;
+        margin: auto;
+    }
+
+    p {
+        margin: 30px 0;
+        font-size: 17px;
+        letter-spacing: 2px;
+    }
+}
+
+@media(min-width: 320px) {
+    .container {
+        width: 250px;
+    }
+}
+
+@media(min-width: 768px) {
+    .container {
+        width: 280px;
+    }
+}

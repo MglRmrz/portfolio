@@ -1,1 +1,43 @@
-<p>skills works!</p>
+<section class="container">
+    <div class="habilities">
+        <h4 class="subtitle">Habilidades</h4>
+        <h2>Mis Habilidades</h2>
+
+        <div class="skills">
+
+            <div class="skill" *ngFor="let skill of skills">
+                <div class="titles">
+                    <h3>{{skill.name}}</h3>
+                    <p>{{skill.know}}%</p>
+                </div>
+                <div class="info">
+                    <div class="quantity" [ngStyle]="{'width': skill.know+'%'}"></div>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="subtitle">Lo que hago</h4>
+        <h2>Desarrollo Web y Android</h2>
+
+        <div class="what-i-do">
+            <what-ido-card 
+                *ngFor="let iDo of whatIDo"
+                [title]="iDo.title"
+                [icon]="iDo.icon"
+                [content]="iDo.content"
+            ></what-ido-card>
+        </div>
+    </div>
+
+    <div class="hireme">
+        <p class="available">
+            Estoy <span>Disponible</span> para trabajar
+        </p>
+
+        <div class="button">
+            <p class="button-text">
+                Contratame
+            </p>
+        </div>
+    </div>
+</section>
