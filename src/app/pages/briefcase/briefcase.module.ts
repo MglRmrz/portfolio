@@ -6,10 +6,11 @@ import { BriefcaseComponent } from './briefcase.component';
 import { SharedModule } from '@shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 
 @NgModule({
-  declarations: [BriefcaseComponent, HomeComponent, AboutComponent],
+  declarations: [BriefcaseComponent, HomeComponent, AboutComponent, SkillsComponent],
   imports: [
     CommonModule,
     BriefcaseRoutingModule,

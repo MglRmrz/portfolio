@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "portafolio-fb03a": {
+      "hosting": {
+        "portafolio": [
+          "portafolio-fb03a"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "portafolio-fb03a"
+  }
+}
