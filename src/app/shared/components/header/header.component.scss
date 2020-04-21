@@ -31,10 +31,11 @@
             list-style: none;
             display: flex;
 
-            .option {
+            a {
                 cursor: pointer;
                 color: $text;
                 font-size: 17px;
+                text-decoration: none;
             }
         }
     }

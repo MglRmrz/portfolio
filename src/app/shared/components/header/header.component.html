@@ -15,10 +15,11 @@
             <li 
                 *ngFor="let option of navOptions"
                 class="option"
-                [class.optionSelected]="option.key === selected"
-                (click)="selected = option.key"
+                (click)="onSelected(option.key)"
             >
+            <a [href]="option.target"  [class.optionSelected]="option.key === selected">
                 {{option.option}}
+            </a>
             </li>
         </ul>
     </nav>

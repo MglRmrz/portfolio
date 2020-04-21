@@ -11,15 +11,12 @@ import { MProject } from '@core/models/project.model';
 })
 export class BriefcaseComponent implements OnInit {
 
-  @ViewChild('contact') contact: ElementRef;
-
   skills: MSkill[];
   projects: MProject[];
 
   constructor(private _skills: SkillsService, private _projects: ProjectsService) { }
 
   ngOnInit(): void {
-    console.log(this.contact);
     this.petitions();
   }
 

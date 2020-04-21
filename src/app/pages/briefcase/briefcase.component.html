@@ -1,13 +1,13 @@
 <app-header></app-header>
-<home></home>
-<about
+<home id="home"></home>
+<about id="about"
     [projectsNumber]="projects && projects.length ? projects.length : 0"
 ></about>
-<skills
+<skills id="skills"
     [skills]="skills"
 ></skills>
-<achievements
+<achievements id="achievements"
     [projects]="projects"
 ></achievements>
-<contact #contact></contact>
+<contact id="contact"></contact>
 <app-footer></app-footer>
