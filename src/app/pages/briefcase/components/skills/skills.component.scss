@@ -46,6 +46,7 @@
                     background: #cdcdcd;
                     border-radius: 50px;
                     margin-top: 15px;
+                    height: 15px;
 
                     .quantity {
                         height: 100%;
@@ -107,13 +108,6 @@
 
             .skills {
                 grid-template-columns: repeat(1, 100%);
-
-                .skill {
-
-                    .info {
-                        height: 20px;
-                    }
-                }
             }
         }
 
@@ -134,13 +128,6 @@
 
             .skills {
                 grid-template-columns: repeat(2, 50%);
-
-                .skill {
-
-                    .info {
-                        height: 25px;
-                    }
-                }
             }
         }
 

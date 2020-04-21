@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, QuerySnapshot, DocumentData } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { MSkill } from '@core/models/skill.model';
-import { Subject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

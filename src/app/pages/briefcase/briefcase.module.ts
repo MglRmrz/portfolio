@@ -8,10 +8,12 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { WhatIDoCardComponent } from './components/what-ido-card/what-ido-card.component';
+import { AchievementsComponent } from './components/achievements/achievements.component';
+import { AchievementsCardComponent } from './components/achievements-card/achievements-card.component';
 
 
 @NgModule({
-  declarations: [BriefcaseComponent, HomeComponent, AboutComponent, SkillsComponent, WhatIDoCardComponent],
+  declarations: [BriefcaseComponent, HomeComponent, AboutComponent, SkillsComponent, WhatIDoCardComponent, AchievementsComponent, AchievementsCardComponent],
   imports: [
     CommonModule,
     BriefcaseRoutingModule,

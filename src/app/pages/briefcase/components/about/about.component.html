@@ -28,8 +28,10 @@
             <img src="./assets/images/code.jpg">
         </div>
         <div class="finished">
-            <p class="quantity">1</p>
-            <p class="text">Proyecto terminado</p>
+            <p class="quantity">{{projectsNumber}}</p>
+            <p class="text">
+                Proyecto{{projectsNumber !== 1 ? 's' : ''}} terminado{{projectsNumber !== 1 ? 's' : ''}}
+            </p>
         </div>
     </div>
 </section>

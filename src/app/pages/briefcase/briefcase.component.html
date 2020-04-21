@@ -1,6 +1,11 @@
 <app-header></app-header>
 <home></home>
-<about></about>
+<about
+    [projectsNumber]="projects && projects.length ? projects.length : 0"
+></about>
 <skills
     [skills]="skills"
 ></skills>
+<achievements
+    [projects]="projects"
+></achievements>
