@@ -1,0 +1,33 @@
+<footer class="container">
+    <div class="social">
+        <h3>Tambien puedes encontrarme en</h3>
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/miguelramidev" target="__blank">
+                <img src="./assets/icons/linkedin.svg" class="icon">
+            </a>
+            <a href="https://github.com/MglRmrz" target="__blank">
+                <img src="./assets/icons/github.svg" class="icon">
+            </a>
+            <a href="https://twitter.com/Miguelramidev" target="__blank">
+                <img src="./assets/icons/twitter.svg" class="icon">
+            </a>
+            <a href="https://www.instagram.com/miguelramidev" target="__blank">
+                <img src="./assets/icons/instagram.svg" class="icon">
+            </a>
+            <img src="./assets/icons/whatsapp.svg" class="icon" (click)="opacityPhone = !opacityPhone">
+        </div>
+        <p class="phone" [ngStyle]="{'opacity': opacityPhone ? '1' : '0'}">+58 424 559 0520</p>
+    </div>
+    <div class="links">
+        <h3>Enlaces</h3>
+        <ul>
+            <li>→ <span>Inicio</span></li>
+            <li>→ <span>Sobre mí</span></li>
+            <li>→ <span>Habilidades</span></li>
+            <li>→ <span>Logros</span></li>
+            <li>→ <span>Contacto</span></li>
+        </ul>
+    </div>
+
+    <p class="copy">Copyright &copy; 2020 Miguel Ramírez</p>
+</footer>

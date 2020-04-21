@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { SkillsService } from '@core/services/skills.service';
 import { MSkill } from '@core/models/skill.model';
 import { ProjectsService } from '@core/services/projects.service';
@@ -11,12 +11,15 @@ import { MProject } from '@core/models/project.model';
 })
 export class BriefcaseComponent implements OnInit {
 
+  @ViewChild('contact') contact: ElementRef;
+
   skills: MSkill[];
   projects: MProject[];
 
   constructor(private _skills: SkillsService, private _projects: ProjectsService) { }
 
   ngOnInit(): void {
+    console.log(this.contact);
     this.petitions();
   }
 
