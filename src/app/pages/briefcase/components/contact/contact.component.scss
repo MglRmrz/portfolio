@@ -1,0 +1,151 @@
+@import '../../../../app.component.scss';
+
+.container {
+    margin-top: 80px;
+    text-align: center;
+    color: $text;
+
+    .subtitle {
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .message {
+        color: gray;
+        margin-bottom: 15px;
+    }
+
+    .form {
+        margin: 50px auto;
+        display: flex;
+        background: #f5f5f5;
+        border-radius: 15px;
+
+        img {
+            width: 45%;
+            border-radius: 15px 0 0 15px;
+        }
+
+        .inputs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                width: 80%;
+                height: 40px;
+                border-radius: 10px;
+                padding: 5px 20px;
+            }
+
+            textarea {
+                width: 80%;
+                resize: none;
+                border-radius: 10px;
+            }
+
+            input, textarea {
+                border: 1px solid #cdcdcd;
+                outline: none;
+                font-size: 17px;
+            }
+
+            .button-container {
+                display: flex;
+                justify-content: flex-end;
+
+                .button {
+                    width: 160px;
+                    background: $primary;
+                    color: white;
+                    height: 60px;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 17px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 320px) {
+    .container {
+
+        .form {
+            width: 95%;
+            padding: 15px 0;
+
+            img {
+                display: none;
+            }
+
+            .inputs {
+                width: 100%;
+
+                input, textarea {
+                    margin: 15px 0;
+                }
+
+                textarea {
+                    padding: 15px 20px;
+                }
+
+                .button-container {
+                    width: 90%;
+                }
+            }
+
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .container {
+
+        .form {
+
+            .inputs {
+
+                .button-container {
+                    width: 85%;
+                }
+            }
+
+        }
+    }
+}
+
+@media(min-width: 1024px) {
+    .container {
+
+        .form {
+            width: 80%;
+            padding: 0;
+
+            img {
+                display: block;
+            }
+
+            .inputs {
+                width: 55%;
+
+                input, textarea {
+                    margin: 0;
+                }
+
+                .button-container {
+                    width: 85%;
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<div class="container">
+    <p class="subtitle">Contacto</p>
+    <h2>Contáctame</h2>
+    <p class="message">
+        Estaré más que agradecido y feliz de entrar en tu proyecto de inmediato.
+    </p>
+
+    <form class="form">
+        <img src="./assets/images/myPhoto.jpg">
+
+        <div class="inputs">
+            <input type="text" [(ngModel)]="userContact.name" placeholder="Tu Nombre"
+            [ngModelOptions]="{standalone: true}">
+            <input type="text" [(ngModel)]="userContact.email" placeholder="Tu Correo Electrónico"
+            [ngModelOptions]="{standalone: true}">
+            <input type="text" [(ngModel)]="userContact.subject" placeholder="Asunto"
+            [ngModelOptions]="{standalone: true}">
+            <textarea [(ngModel)]="userContact.message" rows="4" placeholder="Mensaje"
+            [ngModelOptions]="{standalone: true}"></textarea>
+            <div class="button-container">
+                <div class="button">
+                    <p>Enviar mensaje</p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

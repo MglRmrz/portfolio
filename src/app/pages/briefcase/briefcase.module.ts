@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { BriefcaseRoutingModule } from './briefcase-routing.module';
 import { BriefcaseComponent } from './briefcase.component';
@@ -10,14 +11,16 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { WhatIDoCardComponent } from './components/what-ido-card/what-ido-card.component';
 import { AchievementsComponent } from './components/achievements/achievements.component';
 import { AchievementsCardComponent } from './components/achievements-card/achievements-card.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 @NgModule({
-  declarations: [BriefcaseComponent, HomeComponent, AboutComponent, SkillsComponent, WhatIDoCardComponent, AchievementsComponent, AchievementsCardComponent],
+  declarations: [BriefcaseComponent, HomeComponent, AboutComponent, SkillsComponent, WhatIDoCardComponent, AchievementsComponent, AchievementsCardComponent, ContactComponent],
   imports: [
     CommonModule,
     BriefcaseRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class BriefcaseModule { }
