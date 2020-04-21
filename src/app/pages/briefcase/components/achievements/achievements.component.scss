@@ -1,0 +1,94 @@
+@import '../../../../app.component.scss';
+
+.container {
+    color: $text;
+
+    .achivements {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+
+    .container-projects {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .projects {
+            display: flex;
+            // overflow: hidden;
+            // transition: all .5s;
+        }
+
+        .arrow {
+            // width: 60px;
+            // height: 60px;
+            // padding: 0 15px;
+            cursor: pointer;
+        }
+    }
+}
+
+.noVisible {
+    visibility: hidden;
+}
+
+@media(min-width: 320px) {
+    .container {
+
+        .container-projects {
+            padding: 0 5px;
+
+            .projects {
+                overflow: auto;
+            }
+
+            .arrow {
+                padding: 0 5px;
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .container {
+
+        .container-projects {
+            padding: 0;
+
+            .projects {
+                overflow: auto;
+            }
+
+            .arrow {
+                padding: 0 15px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
+}
+
+@media(min-width: 1024px) {
+    .container {
+
+        .container-projects {
+
+            .projects {
+                overflow: hidden;
+            }
+
+            .arrow {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+}

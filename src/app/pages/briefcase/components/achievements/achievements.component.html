@@ -1,9 +1,15 @@
 <section class="container">
+    <p class="achivements">Logros</p>
+    <h2>Mis Proyectos</h2>
 
     <div class="container-projects">
-        <achievements-card
-            *ngFor="let project of projects"
-            [project]="project"
-        ></achievements-card>
+        <img src="./assets/icons/back.svg" class="arrow" (click)="previousProject()">
+        <div class="projects" #divProjects>
+            <achievements-card
+                *ngFor="let project of projects"
+                [project]="project"
+            ></achievements-card>
+        </div>
+        <img src="./assets/icons/next.svg" class="arrow" (click)="nextProject()">
     </div>
 </section>

@@ -2,7 +2,7 @@
 
 .container {
     color: $text;
-    width: 270px;
+    // width: 270px;
     letter-spacing: 2px;
     border-radius: 10px;
     box-shadow: 0 0 15px #cdcdcd;
@@ -38,5 +38,17 @@
         .link {
             color: $info;
         }
+    }
+}
+
+@media(min-width: 320px) {
+    .container {
+        width: 210px;
+    }
+}
+
+@media(min-width: 768px) {
+    .container {
+        width: 270px;
     }
 }
