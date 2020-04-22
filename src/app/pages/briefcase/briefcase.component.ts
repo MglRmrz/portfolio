@@ -27,7 +27,7 @@ export class BriefcaseComponent implements OnInit {
 
   sendEmail({email, message, name, subject}: IUserContact): void {
     this.loadingSendEmail = true;
-    this._email.sendEmail(name.trim(), subject.trim(), email.trim().toLowerCase(), message.trim(), 'en')
+    this._email.sendEmail(name.trim(), subject.trim(), email.trim().toLowerCase(), message.trim(), 'es')
     .subscribe(resp => {
       if (resp.success) {
         this.successSend = true;

@@ -8,6 +8,7 @@
 /bazel-out
 
 config.ts
+/public
 
 # dependencies
 /node_modules
