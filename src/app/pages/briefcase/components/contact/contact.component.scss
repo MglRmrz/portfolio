@@ -20,7 +20,7 @@
     }
 
     .form {
-        margin: 50px auto;
+        margin: 40px auto;
         display: flex;
         background: #f5f5f5;
         border-radius: 15px;
@@ -74,6 +74,16 @@
             }
         }
     }
+
+    .successSend {
+        font-size: 25px;
+        color: green;
+        margin: 20px 0px;
+    }
+}
+
+.isDisabled {
+    background: #bbbbbb!important;
 }
 
 @media(min-width: 320px) {

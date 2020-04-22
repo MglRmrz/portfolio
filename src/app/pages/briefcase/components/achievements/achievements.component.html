@@ -2,7 +2,7 @@
     <p class="achivements">Logros</p>
     <h2>Mis Proyectos</h2>
 
-    <div class="container-projects">
+    <div class="container-projects" *ngIf="projects">
         <img src="./assets/icons/back.svg" class="arrow" (click)="previousProject()">
         <div class="projects" #divProjects>
             <achievements-card
@@ -11,5 +11,9 @@
             ></achievements-card>
         </div>
         <img src="./assets/icons/next.svg" class="arrow" (click)="nextProject()">
+    </div>
+
+    <div class="loading-container" *ngIf="!projects">
+        <general-loading></general-loading>
     </div>
 </section>

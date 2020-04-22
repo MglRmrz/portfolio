@@ -1,5 +1,5 @@
 <section class="container">
-    <div class="habilities">
+    <div class="habilities" *ngIf="skills">
         <h4 class="subtitle">Habilidades</h4>
         <h2>Mis Habilidades</h2>
 
@@ -27,6 +27,10 @@
                 [content]="iDo.content"
             ></what-ido-card>
         </div>
+    </div>
+
+    <div class="loading-container" *ngIf="!skills">
+        <general-loading></general-loading>
     </div>
 
     <div class="hireme">

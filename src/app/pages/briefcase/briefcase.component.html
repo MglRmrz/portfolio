@@ -9,5 +9,7 @@
 <achievements id="achievements"
     [projects]="projects"
 ></achievements>
-<contact id="contact"></contact>
+<contact id="contact" (onSendEmail)="sendEmail($event)" 
+[successIsVisible]="successSend" 
+[loadingSend]="loadingSendEmail"></contact>
 <app-footer></app-footer>

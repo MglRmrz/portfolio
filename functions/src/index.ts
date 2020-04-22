@@ -1,25 +1,14 @@
+import * as express from 'express';
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 import * as nodemailer from 'nodemailer';
 import * as cors from 'cors';
 import { config } from './config';
 
-cors({origin: true});
-admin.initializeApp();
+const app = express();
+app.use(cors({origin: true}));
 
-
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: 'miguelramidev@gmail.com',
-        pass: config.emailPass
-    }
-});
-
-/**
- * @description Envia un correo electrónico
- */
-export const sendEmail = functions.https.onRequest((req, res) => {
+app.post('/email', (req, res) => {
     try {
         const { subject, dest, message, userName, language } = req.body;
 
@@ -53,7 +42,7 @@ export const sendEmail = functions.https.onRequest((req, res) => {
             `
         }, (err, info) => {
             if (err) {
-                res.status(400).json({
+                res.status(400).send({
                     error: err,
                     success: false
                 });
@@ -76,17 +65,34 @@ export const sendEmail = functions.https.onRequest((req, res) => {
                 }
             });
 
-            res.status(200).json({
+            res.status(200).send({
                 success: true,
                 data: info
             });
         });
 
     } catch (error) {
-        res.status(500).json({
+        res.status(500).send({
             error: 'Internal Error',
             success: false
         })
     }
 })
+
+
+
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'miguelramidev@gmail.com',
+        pass: config.emailPass
+    }
+});
+
+admin.initializeApp();
+
+/**
+ * @description Envia un correo electrónico
+ */
+export const api = functions.https.onRequest(app)
 

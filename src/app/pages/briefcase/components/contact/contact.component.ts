@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'contact',
@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  @Output() onSendEmail: EventEmitter<IUserContact> = new EventEmitter<IUserContact>();
+  @Input() successIsVisible: boolean;
+  @Input() loadingSend: boolean;
+  
   userContact: IUserContact = {
     name: '',
     email: '',
@@ -19,9 +23,22 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * @description Activa el evento para enviar un correo
+   */
+  sendEmail(): void {
+    this.onSendEmail.emit(this.userContact);
+    this.userContact = {
+      name: '',
+      email: '',
+      message: '',
+      subject: ''
+    }
+  }
+
 }
 
-interface IUserContact {
+export interface IUserContact {
   name: string,
   email: string,
   subject: string,

@@ -18,10 +18,18 @@
             <textarea [(ngModel)]="userContact.message" rows="4" placeholder="Mensaje"
             [ngModelOptions]="{standalone: true}"></textarea>
             <div class="button-container">
-                <div class="button">
-                    <p>Enviar mensaje</p>
-                </div>
+                <button class="button" (click)="sendEmail()"
+                [disabled]="userContact.name.trim().length === 0 || userContact.email.trim().length === 0 || 
+                userContact.subject.trim().length === 0 || userContact.message.trim().length === 0"
+                [class.isDisabled]="userContact.name.trim().length === 0 || userContact.email.trim().length === 0 || 
+                userContact.subject.trim().length === 0 || userContact.message.trim().length === 0 || 
+                loadingSend">
+                    <span *ngIf="!loadingSend">Enviar mensaje</span>
+                    <button-loading *ngIf="loadingSend"></button-loading>
+                </button>
             </div>
         </div>
     </form>
+
+    <p class="successSend" *ngIf="successIsVisible">Revise su correo, pronto responderé a su mensaje</p>
 </div>
