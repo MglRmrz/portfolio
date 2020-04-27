@@ -1,12 +1,27 @@
-<div class="container">
-    <img [src]="project.image">
+<ng-container *ngIf="project">
+  <div class="container">
+    <img [src]="project.image" />
 
     <div class="info">
-        <h3>{{project.name}}</h3>
-        <p class="title">Descripción:</p>
-        <p class="text">{{project.description}}</p>
-        <p class="title">Herramienta utilizada:</p>
-        <p class="text">{{project.tool}}</p>
-        <a [href]="project.link" class="text link" target="_blank">Enlace aquí</a>
+      <h3>{{ project.name }}</h3>
+      <p class="title">Descripción:</p>
+      <p class="text">{{ project.description }}</p>
+      <p class="title">Herramienta utilizada:</p>
+      <p class="text">{{ project.tool }}</p>
+      <a [href]="project.link" class="text link" target="_blank">Enlace aquí</a>
     </div>
-</div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="certificate">
+  <div class="container">
+    <img [src]="certificate.image" class="img-certificate" />
+
+    <div class="info">
+      <h3>{{ certificate.name }}</h3>
+      <a [href]="certificate.link" class="text link" target="_blank"
+        >Enlace aquí</a
+      >
+    </div>
+  </div>
+</ng-container>

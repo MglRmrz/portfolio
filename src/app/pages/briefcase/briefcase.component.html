@@ -1,15 +1,19 @@
 <app-header></app-header>
 <home id="home"></home>
-<about id="about"
-    [projectsNumber]="projects && projects.length ? projects.length : 0"
+<about
+  id="about"
+  [projectsNumber]="projects && projects.length ? projects.length : 0"
 ></about>
-<skills id="skills"
-    [skills]="skills"
-></skills>
-<achievements id="achievements"
-    [projects]="projects"
+<skills id="skills" [skills]="skills"></skills>
+<achievements
+  id="achievements"
+  [projects]="projects"
+  [certificates]="certificates"
 ></achievements>
-<contact id="contact" (onSendEmail)="sendEmail($event)" 
-[successIsVisible]="successSend" 
-[loadingSend]="loadingSendEmail"></contact>
+<contact
+  id="contact"
+  (onSendEmail)="sendEmail($event)"
+  [successIsVisible]="successSend"
+  [loadingSend]="loadingSendEmail"
+></contact>
 <app-footer></app-footer>

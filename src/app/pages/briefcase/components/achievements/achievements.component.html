@@ -1,19 +1,51 @@
 <section class="container">
-    <p class="achivements">Logros</p>
+  <p class="achivements">Logros</p>
+
+  <ng-container *ngIf="projects && certificates">
     <h2>Mis Proyectos</h2>
 
-    <div class="container-projects" *ngIf="projects">
-        <img src="./assets/icons/back.svg" class="arrow" (click)="previousProject()">
-        <div class="projects" #divProjects>
-            <achievements-card
-                *ngFor="let project of projects"
-                [project]="project"
-            ></achievements-card>
-        </div>
-        <img src="./assets/icons/next.svg" class="arrow" (click)="nextProject()">
+    <div class="container-projects">
+      <img
+        src="./assets/icons/back.svg"
+        class="arrow"
+        (click)="previousProject()"
+      />
+      <div class="projects" #divProjects>
+        <achievements-card
+          *ngFor="let project of projects"
+          [project]="project"
+        ></achievements-card>
+      </div>
+      <img
+        src="./assets/icons/next.svg"
+        class="arrow"
+        (click)="nextProject()"
+      />
     </div>
 
-    <div class="loading-container" *ngIf="!projects">
-        <general-loading></general-loading>
+    <h2 class="certificates">Cursos Aprobados</h2>
+
+    <div class="container-projects">
+      <img
+        src="./assets/icons/back.svg"
+        class="arrow"
+        (click)="previousCertificate()"
+      />
+      <div class="projects" #divCertificates>
+        <achievements-card
+          *ngFor="let certificate of certificates"
+          [certificate]="certificate"
+        ></achievements-card>
+      </div>
+      <img
+        src="./assets/icons/next.svg"
+        class="arrow"
+        (click)="nextCertificate()"
+      />
     </div>
+  </ng-container>
+
+  <div class="loading-container" *ngIf="!(projects && certificates)">
+    <general-loading></general-loading>
+  </div>
 </section>
