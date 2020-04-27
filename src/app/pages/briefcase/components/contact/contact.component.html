@@ -1,35 +1,64 @@
 <div class="container">
-    <p class="subtitle">Contacto</p>
-    <h2>Contáctame</h2>
-    <p class="message">
-        Estaré más que agradecido y feliz de entrar en tu proyecto de inmediato.
-    </p>
+  <p class="subtitle">{{ "hireme.contact" | translate }}</p>
+  <h2>{{ "hireme.contactme" | translate }}</h2>
+  <p class="message">
+    {{ "hireme.message" | translate }}
+  </p>
 
-    <form class="form">
-        <img src="./assets/images/myPhoto.jpg">
+  <form class="form">
+    <img src="./assets/images/myPhoto.jpg" />
 
-        <div class="inputs">
-            <input type="text" [(ngModel)]="userContact.name" placeholder="Tu Nombre"
-            [ngModelOptions]="{standalone: true}">
-            <input type="text" [(ngModel)]="userContact.email" placeholder="Tu Correo Electrónico"
-            [ngModelOptions]="{standalone: true}">
-            <input type="text" [(ngModel)]="userContact.subject" placeholder="Asunto"
-            [ngModelOptions]="{standalone: true}">
-            <textarea [(ngModel)]="userContact.message" rows="4" placeholder="Mensaje"
-            [ngModelOptions]="{standalone: true}"></textarea>
-            <div class="button-container">
-                <button class="button" (click)="sendEmail()"
-                [disabled]="userContact.name.trim().length === 0 || userContact.email.trim().length === 0 || 
-                userContact.subject.trim().length === 0 || userContact.message.trim().length === 0"
-                [class.isDisabled]="userContact.name.trim().length === 0 || userContact.email.trim().length === 0 || 
-                userContact.subject.trim().length === 0 || userContact.message.trim().length === 0 || 
-                loadingSend">
-                    <span *ngIf="!loadingSend">Enviar mensaje</span>
-                    <button-loading *ngIf="loadingSend"></button-loading>
-                </button>
-            </div>
-        </div>
-    </form>
+    <div class="inputs">
+      <input
+        type="text"
+        [(ngModel)]="userContact.name"
+        [placeholder]="'hireme.yourName' | translate"
+        [ngModelOptions]="{ standalone: true }"
+      />
+      <input
+        type="text"
+        [(ngModel)]="userContact.email"
+        [placeholder]="'hireme.yourEmail' | translate"
+        [ngModelOptions]="{ standalone: true }"
+      />
+      <input
+        type="text"
+        [(ngModel)]="userContact.subject"
+        [placeholder]="'hireme.subject' | translate"
+        [ngModelOptions]="{ standalone: true }"
+      />
+      <textarea
+        [(ngModel)]="userContact.message"
+        rows="4"
+        [placeholder]="'hireme.messageEmail' | translate"
+        [ngModelOptions]="{ standalone: true }"
+      ></textarea>
+      <div class="button-container">
+        <button
+          class="button"
+          (click)="sendEmail()"
+          [disabled]="
+            userContact.name.trim().length === 0 ||
+            userContact.email.trim().length === 0 ||
+            userContact.subject.trim().length === 0 ||
+            userContact.message.trim().length === 0
+          "
+          [class.isDisabled]="
+            userContact.name.trim().length === 0 ||
+            userContact.email.trim().length === 0 ||
+            userContact.subject.trim().length === 0 ||
+            userContact.message.trim().length === 0 ||
+            loadingSend
+          "
+        >
+          <span *ngIf="!loadingSend">{{ "hireme.send" | translate }}</span>
+          <button-loading *ngIf="loadingSend"></button-loading>
+        </button>
+      </div>
+    </div>
+  </form>
 
-    <p class="successSend" *ngIf="successIsVisible">Revise su correo, pronto responderé a su mensaje</p>
+  <p class="successSend" *ngIf="successIsVisible">
+    {{ "hireme.sended" | translate }}
+  </p>
 </div>

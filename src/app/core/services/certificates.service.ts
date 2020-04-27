@@ -47,7 +47,7 @@ export class CertificatesService {
           data.push(new MCertificate(certificate));
         });
 
-        resolve(data);
+        resolve(data.sort((a, b) => a.position - b.position));
       } catch (error) {
         reject(error);
       }

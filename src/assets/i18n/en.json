@@ -1,0 +1,75 @@
+{
+  "language": "en",
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "achievements": "Achievements",
+    "hireme": "Contact me"
+  },
+  "footer": {
+    "social": "You can also find me at",
+    "links": "Links"
+  },
+  "home": {
+    "hello": "Hello!",
+    "iam": "I am",
+    "title": "Freelance Web Developer",
+    "occupation": "What do I do?",
+    "iama": "I am a",
+    "development": "Full Stack Web Developer"
+  },
+  "about": {
+    "welcome": "Welcome!",
+    "aboutme": "About me",
+    "info": "Young Programmer. Passionate about app development with more than 2 years of experience in creating Web and Android applications.",
+    "info2": "Positive and responsible person in what he does. Willing to face each challenge in the best possible way.",
+    "hobbies": "Hobbies",
+    "projects": "Project",
+    "finished": "finished"
+  },
+  "skills": {
+    "subtitle": "Skills",
+    "title": "My Skills",
+    "whatido": "What I do",
+    "titleWhat": "Web and Android Development",
+    "iam": "I am",
+    "available": "Available",
+    "toWork": "to work",
+    "web": {
+      "title": "Web development",
+      "option1": "Adaptive Web Design",
+      "option2": "Frontend Development",
+      "option3": "Backend Development",
+      "option4": "Integration with REST API"
+    },
+    "android": {
+      "title": "Android development",
+      "option1": "Optimized mobile design",
+      "option2": "Agile development",
+      "option3": "For all versions",
+      "option4": "Integration with REST API"
+    }
+  },
+  "achievements": {
+    "title": "Achievements",
+    "myProjects": "My projects",
+    "approvedCourses": "Approved courses",
+    "card": {
+      "description": "Description:",
+      "tool": "Used tools:",
+      "link": "Link here"
+    }
+  },
+  "hireme": {
+    "contact": "Contact",
+    "contactme": "Contact me",
+    "message": "I will be more than grateful and happy to enter your project immediately.",
+    "yourName": "Your Name",
+    "yourEmail": "Your e-mail",
+    "subject": "Subject",
+    "messageEmail": "Message",
+    "send": "Send message",
+    "sended": "Check your email, I will reply to your message soon."
+  }
+}

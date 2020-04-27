@@ -4,11 +4,15 @@
 
     <div class="info">
       <h3>{{ project.name }}</h3>
-      <p class="title">Descripción:</p>
-      <p class="text">{{ project.description }}</p>
-      <p class="title">Herramienta utilizada:</p>
+      <p class="title">{{ "achievements.card.description" | translate }}</p>
+      <p class="text">
+        {{ language === "en" ? project.descriptionEN : project.descriptionES }}
+      </p>
+      <p class="title">{{ "achievements.card.tool" | translate }}</p>
       <p class="text">{{ project.tool }}</p>
-      <a [href]="project.link" class="text link" target="_blank">Enlace aquí</a>
+      <a [href]="project.link" class="text link" target="_blank">
+        {{ "achievements.card.link" | translate }}
+      </a>
     </div>
   </div>
 </ng-container>
@@ -19,9 +23,9 @@
 
     <div class="info">
       <h3>{{ certificate.name }}</h3>
-      <a [href]="certificate.link" class="text link" target="_blank"
-        >Enlace aquí</a
-      >
+      <a [href]="certificate.link" class="text link" target="_blank">
+        {{ "achievements.card.link" | translate }}
+      </a>
     </div>
   </div>
 </ng-container>

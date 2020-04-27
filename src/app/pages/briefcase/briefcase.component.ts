@@ -7,6 +7,8 @@ import { EmailService } from "@core/services/email.service";
 import { IUserContact } from "./components/contact/contact.component";
 import { CertificatesService } from "@core/services/certificates.service";
 import { MCertificate } from "@core/models/certificate.model";
+import Swal from "sweetalert2";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: "app-briefcase",
@@ -24,11 +26,30 @@ export class BriefcaseComponent implements OnInit {
     private _skills: SkillsService,
     private _projects: ProjectsService,
     private _email: EmailService,
-    private _certificates: CertificatesService
+    private _certificates: CertificatesService,
+    private _translate: TranslateService
   ) {}
 
   ngOnInit(): void {
     this.petitions();
+    setTimeout(() => {
+      Swal.fire({
+        cancelButtonText: "English",
+        cancelButtonColor: "#2a6896",
+        confirmButtonText: "Español",
+        confirmButtonColor: "#2a6896",
+        title: "Idioma / Language",
+        showCancelButton: true,
+        icon: "question",
+      }).then((result) => {
+        // console.log(result);
+        if (result.value) {
+          this._translate.use("es");
+          return;
+        }
+        this._translate.use("en");
+      });
+    }, 1000);
   }
 
   sendEmail({ email, message, name, subject }: IUserContact): void {

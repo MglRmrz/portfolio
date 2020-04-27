@@ -1,28 +1,31 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: "app-header",
+  templateUrl: "./header.component.html",
+  styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent implements OnInit {
-
   @Input() selected: number = 0;
 
-  navOptions: {option: string, key: number, target: string}[] = [
-    {option: 'Inicio', key: 0, target: '#home'},
-    {option: 'Sobre mí', key: 1, target: '#about'},
-    {option: 'Habilidades', key: 2, target: '#skills'},
-    {option: 'Proyectos', key: 3, target: '#achievements'},
-    {option: 'Contactame', key: 4, target: '#contact'},
-  ]
+  navOptions: { option: string; key: number; target: string }[];
   isMenuOpen: boolean = false;
-  displayBackdrop: 'none' | 'block' = 'none';
+  displayBackdrop: "none" | "block" = "none";
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private _translate: TranslateService) {
+    this._translate.stream("header").subscribe((resp) => {
+      this.navOptions = [
+        { option: resp.home, key: 0, target: "#home" },
+        { option: resp.about, key: 1, target: "#about" },
+        { option: resp.skills, key: 2, target: "#skills" },
+        { option: resp.achievements, key: 3, target: "#achievements" },
+        { option: resp.hireme, key: 4, target: "#contact" },
+      ];
+    });
   }
+
+  ngOnInit(): void {}
 
   menuToggle(): void {
     this.isMenuOpen = !this.isMenuOpen;
@@ -32,5 +35,4 @@ export class HeaderComponent implements OnInit {
     this.isMenuOpen = false;
     this.selected = selected;
   }
-
 }

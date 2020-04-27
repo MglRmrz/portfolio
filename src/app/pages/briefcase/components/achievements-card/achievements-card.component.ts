@@ -10,6 +10,7 @@ import { MCertificate } from "@core/models/certificate.model";
 export class AchievementsCardComponent implements OnInit {
   @Input() project: MProject;
   @Input() certificate: MCertificate;
+  @Input() language: "es" | "en";
 
   constructor() {}
 

@@ -1,0 +1,75 @@
+{
+  "language": "es",
+  "header": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "achievements": "Logros",
+    "hireme": "Contactame"
+  },
+  "footer": {
+    "social": "También puedes encontrarme en",
+    "links": "Enlaces"
+  },
+  "home": {
+    "hello": "¡Hola!",
+    "iam": "Soy",
+    "title": "Desarrollador Web Freelance",
+    "occupation": "¿A qué me dedico?",
+    "iama": "Soy un",
+    "development": "Desarrollador Web Full Stack"
+  },
+  "about": {
+    "welcome": "¡Bienvenido!",
+    "aboutme": "Sobre mí",
+    "info": "Joven Programador. Apasionado en el desarrollo de apps con más de 2 años de experiencia en la creación de aplicaciones Web y Android.",
+    "info2": "Persona positiva y responsable en lo que hace. Dispuesto a afrontar cada reto de la mejor manera posible.",
+    "hobbies": "Pasatiempos",
+    "projects": "Proyecto",
+    "finished": "Terminado"
+  },
+  "skills": {
+    "subtitle": "Habilidades",
+    "title": "Mis Habilidades",
+    "whatido": "Lo que hago",
+    "titleWhat": "Desarrollo Web y Android",
+    "iam": "Estoy",
+    "available": "Disponible",
+    "toWork": "para trabajar",
+    "web": {
+      "title": "Desarrollo Web",
+      "option1": "Diseño Web adaptable",
+      "option2": "Desarrollo Frontend",
+      "option3": "'Desarrollo Backend",
+      "option4": "Integración con API REST"
+    },
+    "android": {
+      "title": "Desarrollo Android",
+      "option1": "Diseño móvil optimizado",
+      "option2": "Desarrollo ágil",
+      "option3": "Para todas las versiones",
+      "option4": "Integración con API REST"
+    }
+  },
+  "achievements": {
+    "title": "Logros",
+    "myProjects": "Mis Proyectos",
+    "approvedCourses": "Cursos aprobados",
+    "card": {
+      "description": "Descripción:",
+      "tool": "Herramientas utilizadas:",
+      "link": "Enlace aquí"
+    }
+  },
+  "hireme": {
+    "contact": "Contacto",
+    "contactme": "Contactame",
+    "message": "Estaré más que agradecido y feliz de entrar en tu proyecto de inmediato.",
+    "yourName": "Tu Nombre",
+    "yourEmail": "Tu Correo Electrónico",
+    "subject": "Asunto",
+    "messageEmail": "Mensaje",
+    "send": "Enviar mensaje",
+    "sended": "Revise su correo, pronto responderé a su mensaje."
+  }
+}

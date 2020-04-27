@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from "@angular/core";
 import { MProject } from "@core/models/project.model";
 import { MCertificate } from "@core/models/certificate.model";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: "achievements",
@@ -13,8 +14,13 @@ export class AchievementsComponent implements OnInit {
   @ViewChild("divProjects", { static: false }) divProjects: ElementRef;
   @ViewChild("divCertificates", { static: false }) divCertificates: ElementRef;
   scrollPosition: number = 0;
+  currentLanguage: "es" | "en";
 
-  constructor() {}
+  constructor(private _translate: TranslateService) {
+    this._translate.stream("language").subscribe((resp) => {
+      this.currentLanguage = resp;
+    });
+  }
 
   ngOnInit(): void {
     // console.log(this.divProjects);

@@ -1,8 +1,8 @@
 <section class="container">
-  <p class="achivements">Logros</p>
+  <p class="achivements">{{ "achievements.title" | translate }}</p>
 
   <ng-container *ngIf="projects && certificates">
-    <h2>Mis Proyectos</h2>
+    <h2>{{ "achievements.myProjects" | translate }}</h2>
 
     <div class="container-projects">
       <img
@@ -14,6 +14,7 @@
         <achievements-card
           *ngFor="let project of projects"
           [project]="project"
+          [language]="currentLanguage"
         ></achievements-card>
       </div>
       <img
@@ -23,7 +24,9 @@
       />
     </div>
 
-    <h2 class="certificates">Cursos Aprobados</h2>
+    <h2 class="certificates">
+      {{ "achievements.approvedCourses" | translate }}
+    </h2>
 
     <div class="container-projects">
       <img
@@ -35,6 +38,7 @@
         <achievements-card
           *ngFor="let certificate of certificates"
           [certificate]="certificate"
+          [language]="currentLanguage"
         ></achievements-card>
       </div>
       <img

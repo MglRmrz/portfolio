@@ -1,30 +1,29 @@
 <section class="container">
-    
-    <div class="container-image">
-        <img src="./assets/images/myPhoto.jpg">
+  <div class="container-image">
+    <img src="./assets/images/myPhoto.jpg" />
+  </div>
+
+  <div class="container-info">
+    <div class="greeting" [ngStyle]="{ opacity: opacityGreeting }">
+      <p class="hello">{{ "home.hello" | translate }}</p>
+      <h2 class="name">
+        {{ "home.iam" | translate }} <span>Miguel Ramírez</span>
+      </h2>
+      <h3>
+        {{ "home.title" | translate }}
+      </h3>
     </div>
 
-    <div class="container-info">
-
-        <div class="greeting" [ngStyle]="{'opacity': opacityGreeting}">
-            <p class="hello">¡Hola!</p>
-            <h2 class="name">
-                Soy <span>Miguel Ramírez</span>
-            </h2>
-            <h3>
-                Desarrollador Web Freelancer
-            </h3>
-        </div>
-
-        <div class="profession" [ngStyle]="{'opacity': opacityProfession}">
-            <p class="hello">¿A qué me dedico?</p>
-            <h2 class="name">
-                Soy un <span>Desarrollador Web FullStack</span>
-            </h2>
-        </div>
-
-        <a class="hireme" href="#contact">
-            Contratame
-        </a>
+    <div class="profession" [ngStyle]="{ opacity: opacityProfession }">
+      <p class="hello">{{ "home.occupation" | translate }}</p>
+      <h2 class="name">
+        {{ "home.iama" | translate }}
+        <span>{{ "home.development" | translate }}</span>
+      </h2>
     </div>
+
+    <a class="hireme" href="#contact">
+      {{ "header.hireme" | translate }}
+    </a>
+  </div>
 </section>

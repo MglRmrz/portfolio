@@ -1,37 +1,36 @@
 <section class="container">
+  <div class="about">
+    <p class="welcome">{{ "about.welcome" | translate }}</p>
+    <h2>{{ "about.aboutme" | translate }}</h2>
+    <p class="info">
+      {{ "about.info" | translate }}
+    </p>
+    <p class="info">
+      {{ "about.info2" | translate }}
+    </p>
 
-    <div class="about">
-        <p class="welcome">¡Bienvenido!</p>
-        <h2>Sobre mí</h2>
-        <p class="info">
-            Joven Programador. Apasionado en el desarrollo de apps con más de 
-            <span>2 años de experiencia</span> en la creación de aplicaciones <span>Web y Android</span>.
-        </p>
-        <p class="info">
-            Persona positiva y responsable en lo que hace. Dispuesto a afrontar cada reto de la mejor 
-            manera posible.
-        </p>
+    <h3>{{ "about.hobbies" | translate }}</h3>
 
-        <h3>Pasatiempos</h3>
-
-        <div class="hobbies">
-            <img src="./assets/icons/games.svg">
-            <img src="./assets/icons/book.svg">
-            <img src="./assets/icons/music.svg">
-            <img src="./assets/icons/gym.svg">
-        </div>
+    <div class="hobbies">
+      <img src="./assets/icons/games.svg" />
+      <img src="./assets/icons/book.svg" />
+      <img src="./assets/icons/music.svg" />
+      <img src="./assets/icons/gym.svg" />
     </div>
+  </div>
 
-    <div class="image">
-        <div class="image-container">
-            <div class="background"></div>
-            <img src="./assets/images/code.jpg">
-        </div>
-        <div class="finished">
-            <p class="quantity">{{projectsNumber}}</p>
-            <p class="text">
-                Proyecto{{projectsNumber !== 1 ? 's' : ''}} terminado{{projectsNumber !== 1 ? 's' : ''}}
-            </p>
-        </div>
+  <div class="image">
+    <div class="image-container">
+      <div class="background"></div>
+      <img src="./assets/images/code.jpg" />
     </div>
+    <div class="finished">
+      <p class="quantity">{{ projectsNumber }}</p>
+      <p class="text">
+        {{ "about.projects" | translate }}{{ projectsNumber !== 1 ? "s" : "" }}
+        {{ "about.finished" | translate }}
+        {{ projectsNumber !== 1 && currentLanguage === "es" ? "s" : "" }}
+      </p>
+    </div>
+  </div>
 </section>
