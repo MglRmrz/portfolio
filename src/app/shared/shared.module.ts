@@ -5,6 +5,7 @@ import { FooterComponent } from "./components/footer/footer.component";
 import { ButtonLoadingComponent } from "./components/button-loading/button-loading.component";
 import { GeneralLoadingComponent } from "./components/general-loading/general-loading.component";
 import { TranslateModule } from "@ngx-translate/core";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { TranslateModule } from "@ngx-translate/core";
     ButtonLoadingComponent,
     GeneralLoadingComponent,
   ],
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, FormsModule],
   exports: [
     HeaderComponent,
     FooterComponent,

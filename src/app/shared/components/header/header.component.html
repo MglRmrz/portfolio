@@ -1,30 +1,42 @@
 <header class="header">
+  <div class="title-container">
+    <img
+      src="./assets/icons/open-menu.svg"
+      class="open-menu"
+      (click)="menuToggle()"
+    />
 
-    <div class="title-container">
-        <img src="./assets/icons/open-menu.svg" class="open-menu" (click)="menuToggle()">
+    <h1 class="title">
+      Miguel Ramírez
+    </h1>
 
-        <h1 class="title">
-            Miguel Ramírez
-        </h1>
+    <div class="triangle"></div>
+  </div>
 
-        <div class="triangle"></div>
-    </div>
+  <nav>
+    <ul [ngStyle]="{ top: isMenuOpen ? '70px' : '-230px' }">
+      <li
+        *ngFor="let option of navOptions"
+        class="option"
+        (click)="onSelected(option.key)"
+      >
+        <a
+          [href]="option.target"
+          [class.optionSelected]="option.key === selected"
+        >
+          {{ option.option }}
+        </a>
+      </li>
+      <li class="language">
+        <select (change)="changeLanguage($event)" [(ngModel)]="currentLanguage">
+          <option value="en">EN</option>
+          <option value="es">ES</option>
+        </select>
+      </li>
+    </ul>
+  </nav>
 
-    <nav>
-        <ul [ngStyle]="{'top': isMenuOpen ? '70px' : '-230px'}">
-            <li 
-                *ngFor="let option of navOptions"
-                class="option"
-                (click)="onSelected(option.key)"
-            >
-            <a [href]="option.target"  [class.optionSelected]="option.key === selected">
-                {{option.option}}
-            </a>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- <div class="backdrop" [ngStyle]="{'opacity': isMenuOpen ? '1' : '0', 'z-index': isMenuOpen ? '8' : '0'}"
+  <!-- <div class="backdrop" [ngStyle]="{'opacity': isMenuOpen ? '1' : '0', 'z-index': isMenuOpen ? '8' : '0'}"
         (click)="menuToggle()"
     ></div> -->
 </header>

@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   navOptions: { option: string; key: number; target: string }[];
   isMenuOpen: boolean = false;
   displayBackdrop: "none" | "block" = "none";
+  currentLanguage: "es" | "en" = "en";
 
   constructor(private _translate: TranslateService) {
     this._translate.stream("header").subscribe((resp) => {
@@ -22,6 +23,10 @@ export class HeaderComponent implements OnInit {
         { option: resp.achievements, key: 3, target: "#achievements" },
         { option: resp.hireme, key: 4, target: "#contact" },
       ];
+    });
+
+    this._translate.stream("language").subscribe((resp) => {
+      this.currentLanguage = resp;
     });
   }
 
@@ -34,5 +39,9 @@ export class HeaderComponent implements OnInit {
   onSelected(selected: number): void {
     this.isMenuOpen = false;
     this.selected = selected;
+  }
+
+  changeLanguage(event: any): void {
+    this._translate.use(event.target.value);
   }
 }
