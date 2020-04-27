@@ -43,5 +43,6 @@ export class HeaderComponent implements OnInit {
 
   changeLanguage(event: any): void {
     this._translate.use(event.target.value);
+    this.isMenuOpen = false;
   }
 }

@@ -50,9 +50,16 @@
   .container {
     width: 210px;
   }
+  .project {
+    width: auto;
+    height: auto;
+  }
 }
 
 @media (min-width: 768px) {
+  .project {
+    width: 270px;
+  }
   .container {
     width: 270px;
   }
